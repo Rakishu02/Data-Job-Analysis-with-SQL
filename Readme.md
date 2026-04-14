@@ -148,8 +148,8 @@ Other tools may pay more, but they are much harder to find in the market.
 This project helped me understand both **SQL** and the **job market** better.
 
 - I built complex SQL queries using **CTEs** and **JOINs**
-- I created a scoring system to compare skills
-- I learned how different tools affect salary and demand
+- I created a normalization system to compare skills
+- I learned how useful to apply **statistics** in data.
 
 **Main takeaway:**  
 **SQL** is the foundation, **Python** adds value, and **Tableau** helps turn analysis into something useful for business.
