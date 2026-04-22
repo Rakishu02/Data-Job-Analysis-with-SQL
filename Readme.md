@@ -1,35 +1,34 @@
-# Data Job Analysis
+# Data Analyst Job Market Analysis
 
 ## Overview
 
-This project explores the **Data Analyst job market**.  
-I focused on **salary trends**, **top-paying roles**, and the **skills companies ask for most**.
+This project explores the **Data Analyst job market** using SQL. The primary focus is to analyze **salary trends**, identify **top-paying roles**, and determine the **most in-demand skills** for data professionals. 
 
-The goal was simple: find the skills that help you **get hired** and **earn more**.
+The goal of this analysis is to provide actionable insights for aspiring Data Analysts: discovering which skills optimize both **hiring potential** and **salary growth**.
 
-The dataset came from a SQL course. I used the course structure as a base, but I built the more advanced queries myself, especially for ranking and skill analysis.
+The dataset was initially sourced from an online SQL course. While the foundational structure was provided, I developed and executed advanced custom queries—specifically utilizing Common Table Expressions (CTEs), ranking functions, and min-max normalization—to perform deeper skill and salary analysis.
 
 ---
 
 ## Key Findings
 
-- **SQL** is the most in-demand skill overall.
-- **Python** and **Tableau** appear often in top-paying roles.
-- The highest salaries are usually tied to **senior positions**, not entry-level jobs.
-- Some niche skills pay a lot, but they have very few job openings.
-- The best mix of **demand** and **salary** is: **SQL, Python, and Tableau**.
+- **SQL** is overwhelmingly the most in-demand skill across the board.
+- **Python** and **Tableau** frequently appear as core requirements in top-paying roles.
+- The highest salaries are generally reserved for **senior-level positions** (e.g., Director, Principal), not entry-level jobs.
+- Certain niche skills (like SVN or Solidity) boast high average salaries, but have extremely low job availability, making them risky to specialize in early on.
+- The optimal combination of **high market demand** and **strong salary potential** is: **SQL, Python, and Tableau**.
 
 ---
 
 ## Questions This Project Answers
 
-1. What are the top-paying analyst jobs?
-2. What skills are required for those jobs?
-3. What skills are most in demand?
-4. Which skills are linked to higher salaries?
-5. Which skills offer the best balance of demand and salary?
+1. **Top Paying Jobs**: What are the highest-paying analyst roles in the market?
+2. **Skill Requirements for High Earners**: What skills are required for those top-tier jobs?
+3. **Market Demand**: What skills are the most requested by employers?
+4. **Salary Premium**: Which specific skills are statistically linked to the highest salaries?
+5. **Optimal Skillset**: Which skills offer the best balance of job availability and salary compensation?
 
-**Tools used:** PostgreSQL, VS Code
+**Tools Used:** PostgreSQL, Visual Studio Code (VS Code)
 
 ---
 
@@ -37,135 +36,124 @@ The dataset came from a SQL course. I used the course structure as a base, but I
 
 ![Top paying role](assets/photo_1.png)
 
-Some roles reach very high salaries, even up to **$650,000**. A large number of the top roles also sit around **$375,000**.
+Some data roles reach extraordinary compensation levels, peaking as high as **$650,000**, with a significant cluster of top roles averaging around **$375,000**.
 
-The main takeaway is clear: these are **not entry-level jobs**.
-
-Most of them are senior roles like **Director**, **Principal**, or **SVP**. That means salary is driven more by **experience**, **leadership**, and **business impact** than by basic technical work alone.
+**Insights:**
+- These are definitively **not entry-level jobs**.
+- The titles typically reflect senior leadership (e.g., **Director**, **Principal**, **SVP**). 
+- Compensation at this level is driven heavily by **experience**, **strategic leadership**, and **direct business impact** rather than just technical execution.
 
 ---
 
 ## 2. Skills Required for Top Paying Jobs
 
-| count_of_skill | top_skill |
+| Count of Skill | Top Skill |
 |---:|---|
-| 58 | python |
-| 52 | sql |
-| 34 | tableau |
-| 32 | r |
-| 18 | sas |
-| 15 | excel |
-| 10 | power bi |
-| 10 | spark |
-| 9 | aws |
-| 8 | snowflake |
+| 58 | Python |
+| 52 | SQL |
+| 34 | Tableau |
+| 32 | R |
+| 18 | SAS |
+| 15 | Excel |
+| 10 | Power BI |
+| 10 | Spark |
+| 9 | AWS |
+| 8 | Snowflake |
 
-For top-paying roles, **Python** and **SQL** are the most important skills.
-
-**Python** appears slightly more often, which shows how valuable it is at higher levels.  
-**Tableau** also shows up more often than **Power BI** in these roles.
-
-Some jobs also ask for tools like **AWS**, **Spark**, and **Snowflake**. That suggests higher-level analysts are often expected to understand more than just analysis. They also need to understand **data systems**.
+**Insights:**
+- For the highest-paying roles, **Python** and **SQL** dominate the requirements.
+- **Python** appears slightly more frequently than SQL, indicating its immense value at advanced, analytical levels.  
+- **Tableau** outpaces **Power BI** for senior data roles.
+- The presence of tools like **AWS**, **Spark**, and **Snowflake** suggests that elite analysts are expected to understand data architecture and engineering systems, not just data visualization.
 
 ---
 
-## 3. Most In-Demand Skills
+## 3. Most In-Demand Skills Across All Jobs
 
-| top_skill | count_of_skill |
+| Top Skill | Count of Skill |
 |---|---:|
-| sql | 92628 |
-| excel | 67031 |
-| python | 57326 |
-| tableau | 46554 |
-| power bi | 39468 |
+| SQL | 92,628 |
+| Excel | 67,031 |
+| Python | 57,326 |
+| Tableau | 46,554 |
+| Power BI | 39,468 |
 
-Across the full job market, **SQL** is the most requested skill.
-
-**Excel** is also very common, even more than **Python**.
-
-This shows a clear pattern:
-
-**Excel** helps you get started.  
-**SQL** is needed in most roles.  
-**Python** helps you move toward higher-paying work.
+**Insights:**
+- Looking at the broader job market, **SQL** is by far the most requested skill.
+- **Excel** remains heavily relied upon, ranking higher than Python in overall volume.
+- **The Career Progression Pattern:**
+  - **Excel** provides the baseline entry point.
+  - **SQL** is the mandatory foundation for most data roles.
+  - **Python** serves as the bridge to advanced, higher-paying opportunities.
 
 ---
 
-## 4. Skills Linked to Higher Salaries
+## 4. Skills Linked to the Highest Salaries
 
-| top_skill | average_salary |
+| Top Skill | Average Salary |
 |---|---:|
-| svn | 400000 |
-| solidity | 179000 |
-| couchbase | 160515 |
-| datarobot | 155486 |
-| golang | 155000 |
-| mxnet | 149000 |
-| dplyr | 147633 |
-| vmware | 147500 |
-| terraform | 146734 |
-| twilio | 138500 |
+| SVN | $400,000 |
+| Solidity | $179,000 |
+| Couchbase | $160,515 |
+| DataRobot | $155,486 |
+| Golang | $155,000 |
+| MXNet | $149,000 |
+| dplyr | $147,633 |
+| VMware | $147,500 |
+| Terraform | $146,734 |
+| Twilio | $138,500 |
 
-The highest salaries are often tied to **niche skills**.
-
-Examples like **SVN** and **Solidity** stand out, but there is a catch. These skills have **very few job openings**.
-
-So yes, they pay well. But they are also **riskier** to focus on.
+**Insights:**
+- The absolute highest average salaries are often tied to highly **niche skills** (e.g., SVN, Solidity, Couchbase).
+- **The Catch:** While these skills pay exceptionally well, the total volume of job openings requiring them is extremely low.
+- Pursuing these skills early in a career represents a high-risk, high-reward strategy that is generally not recommended for junior analysts.
 
 ---
 
-## 5. Best Skills to Learn
+## 5. The Best Skills to Learn (Demand & Salary Balance)
 
-| skill_name | job_count | avg_salary | normalization_score |
+| Skill Name | Job Count | Avg Salary | Normalization Score |
 |---|---:|---:|---:|
-| sql | 3892 | 100299 | 0.7292 |
-| python | 2304 | 105115 | 0.5634 |
-| tableau | 2155 | 101543 | 0.5154 |
-| perl | 26 | 133929 | 0.5019 |
-| kafka | 54 | 128983 | 0.4657 |
-| excel | 2467 | 88924 | 0.4540 |
-| pytorch | 26 | 124956 | 0.4297 |
-| r | 1337 | 102371 | 0.4167 |
-| airflow | 100 | 121658 | 0.4127 |
-| tensorflow | 31 | 122242 | 0.4085 |
+| SQL | 3,892 | $100,299 | 0.7292 |
+| Python | 2,304 | $105,115 | 0.5634 |
+| Tableau | 2,155 | $101,543 | 0.5154 |
+| Perl | 26 | $133,929 | 0.5019 |
+| Kafka | 54 | $128,983 | 0.4657 |
+| Excel | 2,467 | $88,924 | 0.4540 |
+| PyTorch | 26 | $124,956 | 0.4297 |
+| R | 1,337 | $102,371 | 0.4167 |
+| Airflow | 100 | $121,658 | 0.4127 |
+| TensorFlow | 31 | $122,242 | 0.4085 |
 
-To balance demand and salary, I used **min-max normalization**.
-
-The top three skills are:
-
-**SQL**  
-**Python**  
-**Tableau**
-
-These give the best mix of **job opportunities** and **salary potential**.
-
-Other tools may pay more, but they are much harder to find in the market.
+**Insights:**
+- To objectively identify the best skills to learn, I applied a **min-max normalization** algorithm balancing job availability against average salary.
+- The optimal "Big Three" skills are clear: **SQL, Python, and Tableau**.
+- Focusing on these three technologies provides the highest probability of securing a job while maintaining strong earning potential.
 
 ---
 
 ## What I Learned
 
-This project helped me understand both **SQL** and the **job market** better.
+Executing this project enhanced my technical SQL proficiency and my understanding of labor market dynamics.
 
-- I built complex SQL queries using **CTEs** and **JOINs**
-- I created a normalization system to compare skills
-- I learned how useful to apply **statistics** in data.
+- **Advanced SQL:** I constructed complex queries utilizing **CTEs** (Common Table Expressions), **JOINs**, and aggregation functions to synthesize large datasets.
+- **Mathematical Application in SQL:** I developed a normalization scoring system directly within PostgreSQL to rank skills based on multiple weighted variables.
+- **Analytical Thinking:** I translated raw data into actionable business and career intelligence.
 
-**Main takeaway:**  
-**SQL** is the foundation, **Python** adds value, and **Tableau** helps turn analysis into something useful for business.
+**Main Takeaway:**  
+**SQL** is the non-negotiable foundation, **Python** unlocks advanced analytics and automation, and **Tableau** is essential for translating data into digestible business decisions.
 
 ---
 
-## Conclusion
+## Conclusion & Recommendations
 
-If your goal is to get a job and grow your salary, do not chase rare skills too early.
+For aspiring Data Analysts aiming to maximize employability and income:
 
-Start with:
+1. **Avoid the Niche Trap:** Do not chase rare, high-paying skills (like Solidity or Golang) early in your career. The lack of job openings makes this a risky path.
+2. **Master the Core Stack:** Focus relentlessly on:
+   - **SQL** (Data Extraction & Manipulation)
+   - **Python** (Advanced Analysis & Scripting)
+   - **Tableau** (Visualization & Storytelling)
+3. **Understand Excel's Place:** While Excel is ubiquitous and necessary, relying on it alone will artificially cap your salary potential.
 
-- **SQL**
-- **Python**
-- **Tableau**
-
-**Excel** is useful at the beginning, but it will not take you very far on its own.
-
-This combination gives you the best chance to grow both your **career** and your **income**.
+Mastering this core stack provides the strongest statistical probability for long-term career growth and income scaling.
